@@ -1,0 +1,23 @@
+Terms:
+- instantiated > or class is called
+- dunder method > double under score method
+- constructors > methods used to prepare class being called
+- parameter > to used pass values to functions and methods
+- argument > value received by parameter specified within class or function call
+- object > instance of class
+- instance variable > set for an instance variable
+
+type() used to check type of variable
+
+#used as a placeholder for code to come
+class <classname>:
+    pass
+
+hasattr() 
+getattr()
+
+.format(mergevalue=value) when passing an argument use the following syntax
+
+Questions
+- Whats the purpose of a class in Python?
+- 
