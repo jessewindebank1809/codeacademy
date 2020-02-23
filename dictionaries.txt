@@ -1,6 +1,14 @@
 #add a new key value pair
 letter_to_points[" "] = 0
 
+#append multiple values to dict based on key
+def play_words(player, word):
+  words_played[player].append(word)
+  print(words_played)
+  
+play_words("player1", "test")
+play_words("player1", "test123")
+
 #get returns value in function or sets default as 30
 inventory.get("stone glove", 30)
 
@@ -12,7 +20,7 @@ for element in oscars:
 for element in oscars.values():
   print(element)
 
-#pop dict entry and replace key
+#removes dict entry and replaces key
 spread["present"] = tarot.pop(22)
 
 #iterate over key value pairs in dictionary
@@ -21,3 +29,4 @@ for key,value in spread.items():
 
 #list comprehension to merge to lists into key/value pair
 letter_to_points = { k:v for (k,v) in zip(letters, points)}
+
