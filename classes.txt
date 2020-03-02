@@ -18,6 +18,9 @@ getattr()
 
 .format(mergevalue=value) when passing an argument use the following syntax
 
+dir() to resolve attributes within an object
+__repr__ method which is used to print out a string version of the object
+
 Questions
 - Whats the purpose of a class in Python?
 - 
