@@ -1,0 +1,39 @@
+if condition:
+if (condition) {
+    <action>
+}
+
+comparison operators:
+Less than: <
+Greater than: >
+Less than or equal to: <=
+Greater than or equal to: >=
+Is equal to: ===
+Is NOT equal to: !==
+
+logical operators:
+the and operator (&&)
+the or operator (||)
+the not operator, otherwise known as the bang operator (!)
+
+truthy and falsy:
+
+below will all evaluate as falsy:
+0
+Empty strings like "" or ''
+null which represent when there is no value at all
+undefined which represent when a declared variable lacks a value
+NaN, or Not a Number
+
+truthy and falsy assignment
+let varname = truevalue || falsevalue
+
+terny operator //short hand if / else statement
+name ?
+truevalue :
+falsevalue
+
+
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-control-flow/cheatsheet

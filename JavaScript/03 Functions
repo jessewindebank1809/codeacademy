@@ -1,0 +1,27 @@
+Basic syntax:
+
+function functionName() {
+    return functionBody
+}
+
+functionName(arg1, arg2)
+
+function helper:
+call one another function to complete the compute
+
+function expression:
+variable name = function(arg1) {
+    functionBody
+}
+
+arrow function:
+(para1, para2) => {
+
+}
+
+single line arrow function:
+const var1 = para1 => num1 * num2;
+
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-functions/cheatsheet

@@ -1,0 +1,25 @@
+primitive data types = text, number, boolean, null, undefined, symbol
+
+console.log() - writes to log calls the log method on the console object
+
+. operator (.length)
+
+there are a number of string methods:
+.toUpperCase()
+.startsWith()
+.trim()
+
+variables
+var - old
+let - to be updated
+const - to remain read only
+
+mathmetical operators
++=, -=, *=, -=, ++, --
+
+string interpolation
+`text ${varName} //merge field within string output
+
+typeof // returns data type of variables
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet
