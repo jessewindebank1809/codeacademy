@@ -13,11 +13,19 @@ type() used to check type of variable
 class <classname>:
     pass
 
-hasattr() 
+hasattr() π
 getattr()
 
 .format(mergevalue=value) when passing an argument use the following syntax
 
+dunder methods
+__repr__ represents the string representation of a built in function
+__add__ implements an addition function
+
+Super() Function - allows a subclass to invoke its parent’s version of an overridden method.
+
 Questions
 - Whats the purpose of a class in Python?
 - 
+
+https://www.codecademy.com/learn/paths/computer-science/tracks/cspath-python-objects/modules/cspath-python-classes/cheatsheet
