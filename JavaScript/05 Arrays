@@ -2,5 +2,30 @@
 const variables cannot be reassigned
 let variables can be reassigned
 
+.length dot notation is used to count the array / string length
+console.log(objectives.length)
+
+.push() is used to add value to end of array
+itemTracker.push('item 3', 'item 4');
+
+Another array method, .pop(), removes the last item of an array.
+chores.pop();
+
+.shift() removes the first item from an array:
+chores
+
+.slice() slices away a set of elements
+console.log(groceryList.slice(1, 4));
+
+.splice() removes set of data and replaces with element or elements
+test.splice(startIndex, numOfElements, 'new text')
+
+The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+console.log(beasts.indexOf('bison'));
+
+Nested arrays, are arrays within arrays
+
+const nestedArr = [[1], [2, 3]];
+To access a nested array nestedArr[1][1] to access 3
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-arrays/cheatsheet

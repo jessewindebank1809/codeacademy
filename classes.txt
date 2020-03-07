@@ -18,16 +18,13 @@ getattr()
 
 .format(mergevalue=value) when passing an argument use the following syntax
 
-<<<<<<< HEAD
 dunder methods
 __repr__ represents the string representation of a built in function
 __add__ implements an addition function
 
 Super() Function - allows a subclass to invoke its parent’s version of an overridden method.
-=======
 dir() to resolve attributes within an object
 __repr__ method which is used to print out a string version of the object
->>>>>>> a0372c70afe773dcf978fee2669a7bb740b93c9a
 
 Questions
 - Whats the purpose of a class in Python?
