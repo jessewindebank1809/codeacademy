@@ -1,0 +1,28 @@
+.forEach
+fruits.forEach(fruit => console.log('I want to eat a '+ fruit));
+
+.map
+const smallNumbers = bigNumbers.map(number => {
+  return number / 100
+
+.filter
+1. const smallNumbers = randomNumbers.filter(number => {
+  return number < 250
+})
+2. const interestingWords = words.filter(word => word.length > 5);
+console.log(interestingWords);
+
+.findIndex
+const startsWithS = animals.findIndex(animal => {
+  return animal[0] === 's'
+})
+
+The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value. 
+console.log(words.some((word) => {
+  return word.length < 6;
+}));
+
+console.log(interestingWords.every((word) => {return word.length > 5} ));
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-iterators/cheatsheet
