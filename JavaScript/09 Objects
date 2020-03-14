@@ -1,0 +1,12 @@
+create an object
+
+objectname = {
+    propertyName1 : propertyValue1,
+    propertyName2 : propertyValue2
+}
+
+to access use either . notation or square brackets
+objectname.propertyName1
+objectname[propertyName1]
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet
