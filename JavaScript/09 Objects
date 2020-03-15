@@ -9,4 +9,18 @@ to access use either . notation or square brackets
 objectname.propertyName1
 objectname[propertyName1]
 
+getters
+get numOfSensors(){
+    body_goes_here
+}
+
+setters
+set numOfSensors(){
+    body_goes_here
+}
+
+destructured assignment
+const { propertyName } = obj;
+
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods
