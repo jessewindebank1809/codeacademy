@@ -14,6 +14,10 @@ get numOfSensors(){
     body_goes_here
 }
 
+get players () {
+      return this._players;
+  }
+
 setters
 set numOfSensors(){
     body_goes_here
@@ -21,6 +25,39 @@ set numOfSensors(){
 
 destructured assignment
 const { propertyName } = obj;
+
+create objects and save to array
+const team = {
+  _players: [
+    {
+      firstName: 'James',
+      lastName: 'Smith',
+      age: 23
+    },
+
+destructed assignment
+const myDog = {
+  name: 'Tadpole',
+  breed: 'mutt',
+  color: 'tan',
+  weight: 32
+}
+
+let {name} = myDog
+
+code to iterate through keys within object:
+const car = {
+  numDoors: 4,
+  isDirty: true,
+  color: 'red'
+}
+
+for (let key in car) {
+  console.log(key)
+}
+
+add a property to an object:
+bikes['specialized] = 'red';
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods
