@@ -1,0 +1,17 @@
+Classes can be used as templates
+
+class Surgeon {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+  }
+}
+
+create new instance:
+const surgeonCurry = new Surgeon(para1, para2);
+
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-classes/cheatsheet
