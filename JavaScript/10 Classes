@@ -12,6 +12,10 @@ const surgeonCurry = new Surgeon(para1, para2);
 
 const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
 
+inheritance:
+create super class that is used to share properties/methods with child classes
 
+extends - The extends keyword makes the methods of the animal class available inside the cat class.
+super - The super keyword calls the constructor of the parent class. In this case, super(name) passes the name argument of the Cat class to the constructor of the Animal class. When the Animal constructor runs, it sets this._name = name; for new Cat instances.
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-classes/cheatsheet
