@@ -9,4 +9,29 @@ to access use either . notation or square brackets
 objectname.propertyName1
 objectname[propertyName1]
 
+add method as property:
+const objectname = {
+    test () {
+        method.action.goes.here
+    }
+}
+
+pass function variables to alter object properties:
+let greenEnergy = obj => {
+  obj['Fuel Type'] = 'avocado oil';
+}
+
+let remotelyDisable = obj => {
+  obj.disabled = true;
+};
+
+looping through object properties:
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`)
+};
+
+for (let crewMember in spaceship.crew) {
+  console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`)
+}
+
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet
