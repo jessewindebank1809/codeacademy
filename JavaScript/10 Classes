@@ -17,5 +17,16 @@ create super class that is used to share properties/methods with child classes
 
 extends - The extends keyword makes the methods of the animal class available inside the cat class.
 super - The super keyword calls the constructor of the parent class. In this case, super(name) passes the name argument of the Cat class to the constructor of the Animal class. When the Animal constructor runs, it sets this._name = name; for new Cat instances.
+* You must always call super on the first line of the constructor
+
+use instance to call getters/methods within class:
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays)
+
+Return number between 0 - 10000
+return Math.floor(Math.random() * 10000)
+
+
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-classes/cheatsheet
