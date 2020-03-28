@@ -1,0 +1,36 @@
+Modules in Node.js are reusable pieces of code that can be exported from one program and imported for use in another program.
+
+let Airplane = {};
+Airplane.myAirplane = 'StarJet';
+
+module.exports = Airplane;
+
+import module assign it to variable:
+const Airplane = require('./1-airplane.js')
+
+create keys within exports:
+module.exports = {
+  myAirplane: "CloudJet",
+  displayAirplane: function() {
+    return this.myAirplane;
+  }
+};
+
+default export:
+export default MessageMixer;
+
+named exports:
+export {availableAirplanes, flightRequirements, meetsStaffRequirements};
+
+named imports:
+import {availableAirplanes, flightRequirements, meetsStaffRequirements} from './airplane';
+
+export as:
+export { specialty as chefsSpecial, isVegetarian as isVeg, isLowSodium };
+
+import as:
+import {isLowSodium as saltFree} from 'Menu';
+
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/intermediate-javascript-modules/cheatsheet
