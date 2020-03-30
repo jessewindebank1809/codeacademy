@@ -1,0 +1,15 @@
+function to return promise:
+const orderSunglasses = () => {
+    return new Promise(myExecutor);
+};
+
+create function and use setTimeout:
+const usingSTO = () => {
+  console.log('This string...');
+}
+
+setTimeout(usingSTO, 2000);
+
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet
