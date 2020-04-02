@@ -10,6 +10,29 @@ const usingSTO = () => {
 
 setTimeout(usingSTO, 2000);
 
+success and failure functions:
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+}
+
+const handleFailure = (rejectionReason) => {
+  console.log(rejectionReason);
+}
+
+checkInventory(order).then(handleSuccess, handleFailure);
+
+separation of concerns:
+Separation of concerns means organizing code into distinct sections each handling a specific task. It enables us to quickly navigate our code and know where to look if something isn’t working.
+
+using catch:
+prom
+  .then((resolvedValue) => {
+    console.log(resolvedValue);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });
+
 
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet
