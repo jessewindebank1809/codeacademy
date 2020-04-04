@@ -34,4 +34,14 @@ for (let crewMember in spaceship.crew) {
   console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`)
 }
 
+getter:
+get ratings() {
+    return this._ratings;
+  }
+
+setter:
+set isCheckedOut(newIsCheckedOut) {
+    this._isCheckedOut = newIsCheckedOut;
+  }
+
 https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet
