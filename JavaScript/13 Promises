@@ -1,0 +1,39 @@
+function to return promise:
+const orderSunglasses = () => {
+    return new Promise(myExecutor);
+};
+
+create function and use setTimeout:
+const usingSTO = () => {
+  console.log('This string...');
+}
+
+setTimeout(usingSTO, 2000);
+
+success and failure functions:
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+}
+
+const handleFailure = (rejectionReason) => {
+  console.log(rejectionReason);
+}
+
+checkInventory(order).then(handleSuccess, handleFailure);
+
+separation of concerns:
+Separation of concerns means organizing code into distinct sections each handling a specific task. It enables us to quickly navigate our code and know where to look if something isn’t working.
+
+using catch:
+prom
+  .then((resolvedValue) => {
+    console.log(resolvedValue);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });
+
+promise all:
+Promise.all() accepts an array of promises as its argument and returns a single promise. 
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet
