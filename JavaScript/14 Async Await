@@ -1,0 +1,37 @@
+async keyword:
+The async keyword is used to write functions that handle asynchronous actions. We wrap our asynchronous logic inside a function prepended with the async keyword. Then, we invoke that function.
+
+async function withAsync(num){
+  if (num === 0){
+      return 'zero';
+    } else {
+      return 'not zero';
+    }
+}
+
+await operator:
+async function asyncFuncExample(){
+  let resolvedValue = await myPromise();
+  console.log(resolvedValue);
+}
+
+asyncFuncExample();
+
+async function announceDinner() {
+  // Write your code below:
+  let resolvedValue = await brainstormDinner();
+  console.log(`I'm going to make ${resolvedValue} for dinner.`);
+}
+
+handling dependent promises:
+async function makeBeans() {
+  const type = await shopForBeans();
+  const isSoft = await soakTheBeans(type);
+  const dinner = await cookTheBeans(isSoft);
+  console.log(dinner)
+}
+
+makeBeans();
+
+
+https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet

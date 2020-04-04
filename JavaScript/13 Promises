@@ -33,6 +33,7 @@ prom
     console.log(rejectionReason);
   });
 
-
+promise all:
+Promise.all() accepts an array of promises as its argument and returns a single promise. 
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet
