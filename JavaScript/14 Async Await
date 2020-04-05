@@ -33,5 +33,35 @@ async function makeBeans() {
 
 makeBeans();
 
+handling errors, try... catch:
+async function usingTryCatch() {
+ try {
+   let resolveValue = await asyncFunction('thing that will fail');
+   let secondValue = await secondAsyncFunction(resolveValue);
+ } catch (err) {
+   // Catches any errors in the try block
+   console.log(err);
+ }
+}
+
+usingTryCatch();
+
+promise example:
+let bakeChicken = () => {
+ return new Promise ((resolve, reject) => {
+   setTimeout(()=>{
+     resolve('chicken')
+   }, 1000)
+ })
+}
+
+promise.all:
+async function serveDinnerAgain() {
+  let foodArray = await Promise.all([steamBroccoli(), cookRice(), bakeChicken(), cookBeans()]);
+  for (let i =0; i < foodArray.length; i++) {
+  console.log(`Dinner is served. We're having ${await foodArray[0]}, ${await foodArray[1]}, ${await foodArray[2]}, and ${await foodArray[3]}.`)
+  }
+  
+}
 
 https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet
