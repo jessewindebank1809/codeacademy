@@ -16,10 +16,24 @@ xhr.onreadystatechange = () => {
 xhr.open('GET',url);
 xhr.send();
 
-
-
-event loop: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 XHR GET diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/XHR+GET+diagram.svg
 XHR POST diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/XHR+POST+diagram.svg
 
+FETCH API(ES6):
+
+fetch('https://api-to-call.com/endpoint').then(response => {
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error('Request failed!');
+}, networkError => {
+  console.log(networkError.message);
+}).then(jsonResponse => {
+  return jsonResponse;
+})
+
+
+Fetch GET diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/fetch+GET+diagram.svg
+
+event loop: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 https://www.codecademy.com/learn/introduction-to-javascript/modules/intermediate-javascript-requests/cheatsheet
