@@ -65,22 +65,55 @@ fetch('https://api-to-call.com/endpoint', {
 })
 
 
-
 Fetch GET diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/fetch+GET+diagram.svg
 Fetch POST diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/fetch+POST+diagram.svg
+
+async GET REQUEST:
+
+const getData = async () => {
+  try {
+    const response = await fetch('https://api-to-call.com/endpoint');
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    } throw new Error('Request failed!');
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async/await GET diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/async+await+GET+diagram.svg
+
+aync POST REQUEST:
+
+const getData = async () => {
+  try { 
+    const response = await fetch('https://api-to-call.com/endpoint', {
+      method: 'POST',
+      body: JSON.stringify({id: 200})
+    })
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    } throw new Error('Request failed!')
+  } catch (error) {
+    console.log(error);
+  }
+
+}
+
+async/await POST diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/async+await+POST+diagram.svg
+
 
 event loop: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 https://www.codecademy.com/learn/introduction-to-javascript/modules/intermediate-javascript-requests/cheatsheet
 
-fetch('https://api-to-call.com/endpoint', {
-  method: 'POST',
-  body: JSON.stringify({id: '200'})
+Four Square details:
+CLIENT ID
+TOUMHR5ENP2JLHBBEWAP1FCJAR5R1G4NAHLVSORMDKBQS421
+CLIENT SECRET
+F4EEXEHBIXVBZN5B1MUY21UR50RCCYQYHNQ3RXQ2MDBVEZ1E
 
-}).then(response => {
-  if (response.ok) {
-    return response.json();
-  }
-  }, networkError => {
-    console.log(networkError.message);
-} throw new Error('Request failed!')
-)
+OpenWeather
+API
+aa43211b2c6a401a584438e09b4ecf44
