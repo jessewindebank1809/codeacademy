@@ -21,18 +21,15 @@ function compareGuesses(human, computer, target) {
 function updateScore(winner) {
     if (winner === true) {
         console.log('Human WINS!');
-        return humanScore +=
+        return humanScore++
     } else {
         console.log('Computer WINS!');
-        return computerScore +=
+        return computerScore++
     }
 }
 
 function advanceRound() {
-    currentRoundNumber +=
-    console.log(`Computer score is ${computerScore}`);
-    console.log(`Human score is ${computerScore}`);
-    console.log(`Current round number is ${currentRoundNumber}`);
+    return currentRoundNumber = currentRoundNumber++
 }
 
 const target = generateTarget(9);
@@ -40,3 +37,6 @@ console.log(`The target is ${target}`);
 const compare = compareGuesses(3, 5, generateTarget);
 const update = updateScore(compare);
 const updateRound = advanceRound();
+console.log(`Computer score is ${computerScore}`);
+console.log(`Human score is ${computerScore}`);
+console.log(`Current round number is ${currentRoundNumber}`);
