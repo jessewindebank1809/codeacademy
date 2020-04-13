@@ -1,0 +1,16 @@
+JSX syntax extension for React
+
+Javascrip is case sensitive
+
+ReactDOM is the name of a JavaScript library. This library contains several React-specific methods, all of which deal with the DOM in some way or another.
+
+ReactDOM.render(<h1>Render me!</h1>, document.getElementById('app'));
+First express should always be JSX expression
+
+Everything within {} will be treated as JavaScript
+
+If statement will break JSX expression
+
+const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
+
+Cheatsheet: https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/bwa-intro-to-react/modules/react-101-jsx-u/cheatsheet
