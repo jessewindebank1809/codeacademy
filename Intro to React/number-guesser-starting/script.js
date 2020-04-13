@@ -2,11 +2,11 @@ let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
 
-function generateTarget(max) {
-    return Math.floor(Math.random() * max)
+const generateTarget = (max) => {
+    return Math.floor(Math.random() * max);
 }
 
-function compareGuesses(human, computer, target) {
+const compareGuesses = (human, computer, target) => {
     let humanGuess = Math.abs(target - human);
     let computerGuess = Math.abs(target - computer);
     console.log(`Current round number is ${currentRoundNumber}`);
@@ -19,19 +19,18 @@ function compareGuesses(human, computer, target) {
     }
 }
 
-function updateScore(winner) {
+const updateScore = (winner) => {
     if (winner === true) {
         console.log('Human WINS!');
-        return humanScore++;
+        humanScore++;
     } else {
         console.log('Computer WINS!');
-        return computerScore++;
+        computerScore++;
     }
 }
 
-function advanceRound() {
+const advanceRound = () => {
     currentRoundNumber++;
-    return currentRoundNumber
 }
 
 const target = generateTarget(10);
