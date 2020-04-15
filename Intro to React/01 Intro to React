@@ -13,4 +13,12 @@ If statement will break JSX expression
 
 const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <RedPanda />,
+  document.getElementById('app')
+);
+
 Cheatsheet: https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/bwa-intro-to-react/modules/react-101-jsx-u/cheatsheet
