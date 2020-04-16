@@ -21,4 +21,19 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
+using if statement:
+class TonightsPlan extends React.Component {
+  render() {
+let task;
+if (fiftyFifty === true) {
+  task = 'out'
+} else {
+  task = 'to bed'
+}
+
+return <h1>Tonight I'm going {task} WOO</h1>;
+    
+}
+}
+
 Cheatsheet: https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/bwa-intro-to-react/modules/react-101-jsx-u/cheatsheet
