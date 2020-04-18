@@ -1,0 +1,10 @@
+React applications are made out of components.
+
+What’s a component?
+
+A component is a small, reusable chunk of code that is responsible for one job. That job is often to render some HTML.
+
+import react library using:
+import React from 'react';
+
+https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/bwa-intro-to-react/modules/react-101-react-components-u/cheatsheet

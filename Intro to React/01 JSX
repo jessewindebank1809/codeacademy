@@ -1,0 +1,34 @@
+JSX syntax extension for React
+
+Javascrip is case sensitive
+
+ReactDOM is the name of a JavaScript library. This library contains several React-specific methods, all of which deal with the DOM in some way or another.
+
+ReactDOM.render(<h1>Render me!</h1>, document.getElementById('app'));
+First express should always be JSX expression
+
+Everything within {} will be treated as JavaScript
+
+If statement will break JSX expression
+
+const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
+
+{!judgmental && <li>Nacho Cheez Straight Out The Jar</li>}
+
+using map method:
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map(person =>
+  // expression goes here:
+<li>{person}</li>
+);
+
+// ReactDOM.render goes here:
+ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'))
+
+List keys:
+const peopleLis = people.map((person, i) =>
+  // expression goes here:
+<li key={'person_' + i}>{person}</li>
+
+Cheatsheet: https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/bwa-intro-to-react/modules/react-101-jsx-u/cheatsheet

@@ -3,3 +3,9 @@ create-react-app <appname>
 
 // start app from app repo
 npm start
+
+retrieve props from component:
+return <h1>{this.props.firstName}</h1>;
+
+import component:
+import { Greeting } from './Greeting';
