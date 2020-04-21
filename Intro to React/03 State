@@ -1,0 +1,51 @@
+State is always stored within the constructor
+React components always have super in their constructor to be setup properly
+
+class App extends React.Component {
+	// constructor method begins here:
+constructor(props) {
+  super(props);
+  this.state = {title: 'Best App'}
+}
+	
+access a components state:
+{this.state.name-of-property}
+
+to set the state:
+this.setState({property: property_value})
+
+event handler bindings:
+For an in-depth explanation of this kind of binding trickery, begin with the React docs. For the less curious, just know that in React, whenever you define an event handler that uses this, you need to add this.methodName = this.methodName.bind(this) to your constructor function.
+
+You can't call this.setState() from inside the render function.
+
+ReactDOM.render(<Toggle />, document.getElementById('app'))
+
+using an onClick event to toggle background color:
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {color: green};
+    this.changeColor = this.changeColor.bind(this);
+  }
+  
+  changeColor() {
+    const newColor = this.state.color == green ? yellow : green;
+    this.setState({ color: newColor });
+  }
+  
+  render() {
+    return (
+      <div style={{background: this.state.color}}>
+        <h1>
+          Change my color
+        </h1>
+        <button onClick={this.changeColor}>
+          Change color
+        </button>
+      </div>
+    );
+  }
+}
+
+Any time that you call this.setState(), this.setState() AUTOMATICALLY calls .render() as soon as the state has changed.

@@ -12,3 +12,5 @@ import { Greeting } from './Greeting';
 
 setting default props:
 Button.defaultProps = {text: 'I am a button'}
+
+
