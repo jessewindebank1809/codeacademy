@@ -7,6 +7,8 @@ constructor(props) {
   super(props);
   this.state = {title: 'Best App'}
 }
+
+state properties are always stored within an object.
 	
 access a components state:
 {this.state.name-of-property}
