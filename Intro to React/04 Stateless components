@@ -1,0 +1,30 @@
+Stateful vs Stateless:
+Stateful is a component that includes a state property
+Stateless is a component that does not include a state property
+
+stateful component:
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'Frarthur'
+    }
+  }
+  render() {
+    return <div></div>;
+  }
+}
+
+stateless component:
+export class Child extends React.Component {
+  render() {
+    return <h1>Hey, my name is {this.props.name}!</h1>
+  }
+}
+
+A React component should use props to store information that can be changed, but can only be changed by a different component.
+
+A React component should use state to store information that the component itself can change.
+
+https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/react-component-state/modules/react-102-stateless-inherit-stateful-u/cheatsheet
+
