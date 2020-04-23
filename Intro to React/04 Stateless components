@@ -26,5 +26,8 @@ A React component should use props to store information that can be changed, but
 
 A React component should use state to store information that the component itself can change.
 
+pattern 1: pattern: a stateful, parent component passes down a prop to a stateless, child component.
+pattern 2: a stateful, parent component passes down an event handler to a stateless, child component. The child component then uses that event handler to update its parent’s state
+
 https://www.codecademy.com/learn/paths/build-web-apps-with-react/tracks/react-component-state/modules/react-102-stateless-inherit-stateful-u/cheatsheet
 
