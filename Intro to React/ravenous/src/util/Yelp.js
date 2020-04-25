@@ -16,7 +16,7 @@ search(term, location, sortBy) {
     }).then(function(jsonResponse) {
         if (jsonResponse.businesses) {
             return jsonResponse.businesses.map(business => {
-                return [business.name, business.addresstt†††t†††]
+                return [business.name, business.address}
             })
         } 
     })
