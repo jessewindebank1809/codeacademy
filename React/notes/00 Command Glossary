@@ -25,7 +25,18 @@ export class Child extends React.Component {
 
 ReactDOM.render(<Parent />, document.getElementById('app'))
 
+map method to render each element:
+{this.props.businesses.map(business => {
+          return <Business key={business.id} business={business} />;
+        })}
+
 callback function:
 variable => {}
 
+VS Code Shortcuts
+Windows + Shift + L - selects multiple instances
+
+Question Log:
+1. What does <link rel="stylesheet" do?
+2. 
 
