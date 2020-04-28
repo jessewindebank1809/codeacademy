@@ -1,6 +1,7 @@
 import commands:
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { ComponentName } from './Component'
 
 stateful component:
@@ -32,6 +33,15 @@ map method to render each element:
 
 callback function:
 variable => {}
+
+find if state value exists:
+if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id))
+
+props vs state:
+state is a private object to a specific component
+props object is used to share state values with other objects
+Props are read only
+
 
 VS Code Shortcuts
 Windows + Shift + L - selects multiple instances
