@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import SearchBar from "../SearchBar/SearchBar";
 
 class App extends React.Component() {
   constructor(props) {
@@ -8,22 +9,37 @@ class App extends React.Component() {
     this.state = {
       searchResults: [
         {
-          name: value,
-          artist: value,
-          album: value,
-          id: value
+          name: "Song 1",
+          artist: "Brit Spears",
+          album: "Call Me Baby",
+          id: "123"
         },
         {
-          name: value,
-          artist: value,
-          album: value,
-          id: value
+          name: "Song 2",
+          artist: "Brit Spears",
+          album: "Call Me Baby",
+          id: "123"
         },
         {
-          name: value,
-          artist: value,
-          album: value,
-          id: value
+          name: "Song 3",
+          artist: "Brit Spears",
+          album: "Call Me Baby",
+          id: "123"
+        }
+      ],
+      playlistName: "New Playlist",
+      playlistTracks: [
+        {
+          name: "Stronger",
+          artist: "Brit Spears",
+          album: "Call Me Baby",
+          id: "123"
+        },
+        {
+          name: "So Emotional",
+          artist: "Brit Spears",
+          album: "Call Me Baby",
+          id: "123"
         }
       ]
     };
@@ -34,9 +50,13 @@ class App extends React.Component() {
           Ja<span className="highlight">mmm</span>ing
         </h1>
         <div className="App">
-          //-- Add a SearchBar component -->
+          <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} />
+            <Playlist
+              playlistName={this.state.playlistName}
+              playlistTracks={this.state.playlistTracks}
+            />
           </div>
         </div>
       </div>
