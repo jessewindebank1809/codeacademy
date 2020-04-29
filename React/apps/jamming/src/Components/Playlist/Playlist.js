@@ -7,7 +7,7 @@ class Playlist extends React.Component {
     this.handleNameChange = this.handleNameChange.bind(this);
   }
   handleNameChange(event) {
-    this.onNameChange(event.target.value);
+    this.props.onNameChange(event.target.value);
   }
 
   render() {
@@ -22,7 +22,9 @@ class Playlist extends React.Component {
           onRemove={this.props.onRemove}
           isRemoval={true}
         />
-        <button className="Playlist-save">SAVE TO SPOTIFY</button>
+        <button className="Playlist-save" onClick={this.props.onSave}>
+          SAVE TO SPOTIFY
+        </button>
       </div>
     );
   }

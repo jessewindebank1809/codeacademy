@@ -42,6 +42,8 @@ state is a private object to a specific component
 props object is used to share state values with other objects
 Props are read only
 
+.map:
+this.state.playlistTracks.map(item => item.id)
 
 VS Code Shortcuts
 Windows + Shift + L - selects multiple instances

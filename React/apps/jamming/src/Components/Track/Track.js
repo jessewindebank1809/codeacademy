@@ -8,9 +8,9 @@ class Track extends React.Component {
   }
   renderAction() {
     if (this.props.onClick(this.props.value) === true) {
-      <button onClick={this.onRemove}>-</button>;
+      <button onClick={this.props.onRemove}>-</button>;
     } else {
-      <button onClick={this.addTrack}>+</button>;
+      <button onClick={this.props.addTrack}>+</button>;
     }
   }
 

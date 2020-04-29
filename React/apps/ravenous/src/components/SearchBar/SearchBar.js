@@ -21,6 +21,7 @@ class SearchBar extends React.Component {
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSortByChange = this.handleSortByChange.bind(this);
+    this.search = this.search.bind(this);
   }
 
   getSortByClass(sortByOption) {
@@ -66,6 +67,10 @@ class SearchBar extends React.Component {
         </li>
       );
     });
+  }
+
+  search(searchTerm) {
+    this.props.onSearch = this.state.term;
   }
 
   render() {
