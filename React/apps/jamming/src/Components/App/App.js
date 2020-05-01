@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
 
-class App extends React.Component() {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -74,6 +74,7 @@ class App extends React.Component() {
 
   savePlaylist() {
     const trackURIs = [this.state.playlistTracks.map(item => item.id)];
+    return trackURIs;
   }
 
   search(searchTerm) {
