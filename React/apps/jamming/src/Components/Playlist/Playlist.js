@@ -1,6 +1,8 @@
 import React from "react";
 import TrackList from "../TrackList/TrackList";
 
+import "./Playlist.css";
+
 class Playlist extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +20,7 @@ class Playlist extends React.Component {
           onChange={this.handleNameChange}
         />
         <TrackList
-          tracks={this.props.state.playlistTracks}
+          tracks={this.props.playlistTracks}
           onRemove={this.props.onRemove}
           isRemoval={true}
         />

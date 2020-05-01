@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Track.css";
+
 class Track extends React.Component {
   constructor(props) {
     super(props);
@@ -7,10 +9,18 @@ class Track extends React.Component {
     this.onRemove = this.onRemove.bind(this);
   }
   renderAction() {
-    if (this.props.onClick(this.props.value) === true) {
-      <button onClick={this.props.onRemove}>-</button>;
+    if (this.props.isRemoval) {
+      return (
+        <button className="Track-action" onClick={this.removeTrack}>
+          -
+        </button>
+      );
     } else {
-      <button onClick={this.props.addTrack}>+</button>;
+      return (
+        <button className="Track-action" onClick={this.addTrack}>
+          +
+        </button>
+      );
     }
   }
 
@@ -31,7 +41,7 @@ class Track extends React.Component {
             {this.props.track.artist} | {this.props.track.album}
           </p>
         </div>
-        <button className="Track-action">+ or -</button>
+        {this.renderAction()}
       </div>
     );
   }

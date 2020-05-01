@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
@@ -8,25 +7,26 @@ import Playlist from "../Playlist/Playlist";
 class App extends React.Component() {
   constructor(props) {
     super(props);
+
     this.state = {
       searchResults: [
         {
           name: "Song 1",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "123"
+          id: "1"
         },
         {
           name: "Song 2",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "123"
+          id: "2"
         },
         {
           name: "Song 3",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "123"
+          id: "3"
         }
       ],
       playlistName: "New Playlist",
@@ -35,13 +35,13 @@ class App extends React.Component() {
           name: "Stronger",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "123"
+          id: "4"
         },
         {
           name: "So Emotional",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "123"
+          id: ""
         }
       ]
     };
@@ -53,19 +53,12 @@ class App extends React.Component() {
   }
 
   addTrack(track) {
-    if (
-      this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)
-    ) {
-      let newTrack = {
-        name: track.name,
-        artist: track.artist,
-        album: track.album,
-        id: track.id
-      };
-      return this.setState({
-        playlistTracks: [...this.state.playlistTracks, newTrack]
-      });
+    let tracks = this.state.playlistTracks;
+    if (tracks.find(savedTrack => savedTrack.id === track.id)) {
+      return;
     }
+    tracks.push(track);
+    this.setState({ playlistTracks: tracks });
   }
 
   removeTrack = track => {
