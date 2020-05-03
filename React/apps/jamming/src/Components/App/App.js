@@ -41,7 +41,7 @@ class App extends React.Component {
           name: "So Emotional",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: ""
+          id: "5"
         }
       ]
     };
@@ -61,19 +61,19 @@ class App extends React.Component {
     this.setState({ playlistTracks: tracks });
   }
 
-  removeTrack = track => {
+  removeTrack(track) {
     const items = this.state.playlistTracks.filter(
       item => item.id !== track.id
     );
     this.setState({ playlistTracks: items });
-  };
+  }
 
   updatePlaylistName(name) {
     this.setState({ playlistName: name });
   }
 
   savePlaylist() {
-    const trackURIs = [this.state.playlistTracks.map(item => item.id)];
+    const trackURIs = [this.state.playlistTracks.map(track => track.uri)];
     return trackURIs;
   }
 
