@@ -3,6 +3,7 @@ import "./App.css";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
+import Spotify from "../util/Spotify";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,19 +15,19 @@ class App extends React.Component {
           name: "Song 1",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "1"
+          id: 1
         },
         {
           name: "Song 2",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "2"
+          id: 2
         },
         {
           name: "Song 3",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "3"
+          id: 3
         }
       ],
       playlistName: "New Playlist",
@@ -35,13 +36,13 @@ class App extends React.Component {
           name: "Stronger",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "4"
+          id: 4
         },
         {
           name: "So Emotional",
           artist: "Brit Spears",
           album: "Call Me Baby",
-          id: "5"
+          id: 5
         }
       ]
     };
@@ -77,8 +78,10 @@ class App extends React.Component {
     return trackURIs;
   }
 
-  search(searchTerm) {
-    console.log(searchTerm);
+  search(term) {
+    Spotify.search(term).then(searchResults => {
+      this.setState({ searchResults: searchResults });
+    });
   }
 
   render() {
