@@ -24,6 +24,7 @@ const Spotify = {
       );
     }
   },
+
   search(term) {
     // use accessToken to GET results based on term, strips down response
     const accessToken = Spotify.getAccessToken();
@@ -48,20 +49,28 @@ const Spotify = {
         }));
       });
   },
+
   savePlaylist(playlistName, trackURIs) {
-    if (playlistName && trackURIs) {
-      let accessToken = this.getAccessToken();
-      let headers = {
-        Authorization: `Bearer ${accessToken}`
-      };
-      let userID;
-      return fetch(`https://api.spotify.com/v1/me`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
-        }
-      });
+    if (!playlistName && !trackURIs) {
+      return;
     }
-    return;
+
+    const accessToken = Spotify.getAccessToken();
+    const headers = {
+      Authorization: `Bearer ${accessToken}`
+    };
+    let userID;
+
+    return fetch(`https://api.spotify.com/v1/me`, {
+      headers: headers
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonResponse => {
+        userID = jsonResponse.id;
+        return;
+      });
   }
 };
 
