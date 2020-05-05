@@ -64,28 +64,27 @@ const Spotify = {
     return fetch(`https://api.spotify.com/v1/me`, {
       headers: headers
     })
-      .then(response => {
-        return response.json();
-      })
+      .then(response => response.json())
       .then(jsonResponse => {
         userID = jsonResponse.id;
-        return;
-      });
-
-    let playlistID;
-    return fetch(`https://api.spotify.com/v1/users/${userID}/playlists`, {
-      headers: headers,
-      method: "POST",
-      body: {
-        name: playlistName
-      }
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(jsonResponse => {
-        playlistID = jsonResponse.id;
-        return;
+        return fetch(`https://api.spotify.com/v1/users/${userID}/playlists`, {
+          headers: headers,
+          method: "POST",
+          body: JSON.stringify({
+            name: playlistName
+          })
+        })
+          .then(response => response.json())
+          .then(jsonResponse => {
+            const playlistID = jsonResponse.id;
+            return fetch(`/v1/users/${userID}/playlists/${playlistID}/tracks`, {
+              headers: headers,
+              method: "POST",
+              body: JSON.stringify({
+                uris: trackURIs
+              })
+            });
+          });
       });
   }
 };
