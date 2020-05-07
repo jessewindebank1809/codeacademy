@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
@@ -10,47 +11,21 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      searchResults: [
-        {
-          name: "Song 1",
-          artist: "Brit Spears",
-          album: "Call Me Baby",
-          id: 1
-        },
-        {
-          name: "Song 2",
-          artist: "Brit Spears",
-          album: "Call Me Baby",
-          id: 2
-        },
-        {
-          name: "Song 3",
-          artist: "Brit Spears",
-          album: "Call Me Baby",
-          id: 3
-        }
-      ],
+      searchResults: [],
       playlistName: "New Playlist",
-      playlistTracks: [
-        {
-          name: "Stronger",
-          artist: "Brit Spears",
-          album: "Call Me Baby",
-          id: 4
-        },
-        {
-          name: "So Emotional",
-          artist: "Brit Spears",
-          album: "Call Me Baby",
-          id: 5
-        }
-      ]
+      playlistTracks: []
     };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
+  }
+
+  search(term) {
+    Spotify.search(term).then(searchResults => {
+      this.setState({ searchResults: searchResults });
+    });
   }
 
   addTrack(track) {
@@ -75,12 +50,11 @@ class App extends React.Component {
 
   savePlaylist() {
     const trackURIs = [this.state.playlistTracks.map(track => track.uri)];
-    return trackURIs;
-  }
-
-  search(term) {
-    Spotify.search(term).then(searchResults => {
-      this.setState({ searchResults: searchResults });
+    Spotify.savePlaylist(this.state.playlistTracks, trackURIs).then(() => {
+      this.setState({
+        playlistName: "New Playlist",
+        playlistTracks: []
+      });
     });
   }
 
