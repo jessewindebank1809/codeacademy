@@ -1,5 +1,4 @@
 import React from "react";
-let accessToken;
 const username = "jessew@2cloudnine.com";
 const password = "hB1RA4mJIm41jX10VrYDCzgOUBNahvVNblkFZ";
 const consumerKey =
@@ -7,6 +6,8 @@ const consumerKey =
 const consumerSecret =
   "9FF4BFBBB6674A368B104E031217F8A317A5BE53CD8CF5C187D998B6FA4739CF";
 const headers = { "Content-Type": "application/x-www-form-urlencoded" };
+
+let accessToken;
 
 const Salesforce = {
   getAccessToken() {
