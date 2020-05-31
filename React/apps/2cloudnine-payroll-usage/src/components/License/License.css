@@ -1,0 +1,16 @@
+.License-Body {
+  background-color: #b0c4df;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2vmin);
+  color: white;
+}
+
+.table {
+  width: auto;
+  background-color: #b0c4df;
+  color: white;
+}

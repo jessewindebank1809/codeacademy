@@ -34,7 +34,7 @@ async function retrieveLicenses() {
   const accessToken = await getAccessToken();
   try {
     const response = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://ap5.salesforce.com/services/data/v48.0/query/?q=select+id,name,Licensed__c,Last_Month__c+from+sfLma__License__c+where+name+=+'L-00051'`,
+      `https://cors-anywhere.herokuapp.com/https://ap5.salesforce.com/services/data/v48.0/query/?q=select+id,sfLma__Account__r.Name,Licensed__c,Last_Month__c,sfLma__Expiration_Date__c,sfLma__Subscriber_Org_ID__c+from+sfLma__License__c+where+name+=+'L-00051'`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${accessToken}` }
@@ -47,9 +47,11 @@ async function retrieveLicenses() {
       return jsonResponse.records.map(record => {
         return {
           id: record.Id,
-          name: record.Name,
+          account: record.sfLma__Account__r.Name,
           minimum: record.Licensed__c,
-          last_month: record.Last_Month__c
+          last_month: record.Last_Month__c,
+          expiration: record.sfLma__Expiration_Date__c,
+          orgid: record.sfLma__Subscriber_Org_ID__c
         };
       });
     }
